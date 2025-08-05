@@ -21,11 +21,6 @@
       "counseling": "June-July"
     },
     "reservation_policy": "As per Maharashtra state government norms and Pillai Group's internal policy.",
-    "contact": {
-      "phone": "+91 22 2748 2273",
-      "email": "phcet@pillai.edu",
-      "website": "https://phcet.in"
-    },
     "faq": [
       {
         "question": "Can I apply for PHCET if I appeared for JEE?",
@@ -39,9 +34,19 @@
         "question": "Can I change my exam center after registration?",
         "answer": "No, exam center changes are generally not allowed once registration is complete."
       }
-    ]
+    ],
+    "contact": {
+      "phone": "+91 22 2748 2273",
+      "email": "phcet@pillai.edu",
+      "website": "https://phcet.in"
+    }
   },
-
+  "phcet_negativemarking": {
+    "answer": "No, there is no negative marking in the PHCET entrance exam."
+  },
+  "degree_computer_science_subjects": {
+    "answer": "For the B.Sc Computer Science degree, core subjects typically include Programming, Data Structures, Algorithms, Database Management, Computer Networks, Operating Systems, Software Engineering and Mathematics."
+  },
   "phcasc": {
     "name": "Pillai HOC College of Arts, Science & Commerce (PHCASC)",
     "history": "Established in 2008 under Mahatma Education Society, PHCASC is affiliated to the University of Mumbai and accredited with NAAC Grade A+ in 2022.",
@@ -153,10 +158,9 @@
       }
     ]
   },
-
   "phcp": {
     "name": "Pillai HOC Polytechnic (PHCP)",
-    "overview": "PHCP offers diploma courses in various engineering fields, focusing on practical skills and industry collaboration.",
+    "overview": "PHCP offers diploma courses in various engineering fields focusing on practical skills and industry collaboration.",
     "affiliation": "Affiliated to Maharashtra State Board of Technical Education (MSBTE).",
     "courses_offered": [
       "Diploma in Computer Engineering",
@@ -183,7 +187,6 @@
       "address": "Pillai HOC Polytechnic, Rasayani, Raigad, Maharashtra"
     }
   },
-
   "phcer": {
     "name": "Pillai HOC College of Education and Research (PHCER)",
     "overview": "PHCER offers B.Ed. and M.Ed. courses aimed at preparing quality educators with a focus on modern pedagogical skills.",
@@ -209,68 +212,5 @@
       "website": "https://phcer.ac.in",
       "address": "Pillai HOC College of Education and Research, Rasayani, Maharashtra"
     }
-  },
-
-  "general": {
-    "campus": {
-      "overview": "Pillai HOC Group campus at Rasayani is a 35-acre lush green campus combining academics, sports, and cultural infrastructure.",
-      "libraries": "Multiple digital and physical libraries accessible 24/7.",
-      "sports": "Facilities include cricket, football, basketball grounds, badminton courts, table tennis, and indoor gym.",
-      "transport": "Fleet of buses connect Rasayani to Panvel, Navi Mumbai, and nearby areas. Private transport and parking available.",
-      "hostels": "Well-maintained hostels with mess, recreational areas, and 24x7 security.",
-      "cafeteria": "Multi-cuisine hygienic food outlets on campus.",
-      "medical": "On-campus medical room with a visiting doctor and tie-ups with local hospitals.",
-      "wifi": "Campus-wide free WiFi and computer labs with internet access."
-    },
-    "events": {
-      "annual_fests": [
-        "Raag - Annual Cultural Fest",
-        "TechnoVision - Tech Symposium",
-        "Sports Day",
-        "NSS Week and Social Service Activities"
-      ],
-      "guest_lectures": "Regular guest lectures and workshops conducted by industry experts and academicians.",
-      "student_activities": "Clubs and committees organize debates, quizzes, drama, dance, and music competitions."
-    },
-    "placements": {
-      "support": "Dedicated placement cell with resume workshops, interview training, and industrial visits.",
-      "partner_companies": [
-        "TCS",
-        "Infosys",
-        "Wipro",
-        "Reliance",
-        "ICICI Bank",
-        "Marriott Hotels"
-      ],
-      "statistics": {
-        "average_package": "₹2.5 LPA",
-        "highest_package": "₹4 LPA",
-        "internship_opportunities": "Summer internships with corporate partners."
-      }
-    },
-    "contacts": {
-      "main_phone": "+91 89285 58081",
-      "email": "info@pillai.edu",
-      "website": "https://pillai.ac.in",
-      "address": "Pillai HOC Group Campus, Rasayani, Raigad, Maharashtra 410207"
-    },
-    "faqs": [
-      {
-        "question": "Is the campus safe for girls?",
-        "answer": "Yes, the campus has strict security with CCTV surveillance, security personnel, and separate girls' hostel."
-      },
-      {
-        "question": "Are scholarships available?",
-        "answer": "Yes, merit and need-based scholarships are available for deserving students."
-      },
-      {
-        "question": "What is the medium of instruction?",
-        "answer": "English is the primary medium of instruction."
-      },
-      {
-        "question": "Can students participate in sports?",
-        "answer": "Absolutely, sports teams and coaching are available for multiple games."
-      }
-    ]
   }
 }

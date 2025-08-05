@@ -2,131 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PHC Chatbot - PHOCCy</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    body {
-      background-color: #f5f7fa;
-      margin: 0;
-      padding: 0;
-    }
-    .chat-container {
-      max-width: 600px;
-      margin: 50px auto;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      background-color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      height: 80vh;
-      overflow: hidden;
-    }
-    .chat-header {
-      background-color: #004aad;
-      color: white;
-      padding: 15px;
-      font-size: 20px;
-      font-weight: bold;
-    }
-    .chat-box {
-      flex: 1;
-      padding: 15px;
-      overflow-y: auto;
-    }
-    .message {
-      margin: 10px 0;
-      max-width: 80%;
-      padding: 10px 15px;
-      border-radius: 15px;
-      clear: both;
-      line-height: 1.5;
-    }
-    .user {
-      background-color: #d1e7ff;
-      align-self: flex-end;
-      margin-left: auto;
-    }
-    .bot {
-      background-color: #f0f0f0;
-      align-self: flex-start;
-      margin-right: auto;
-    }
-    .chat-input {
-      display: flex;
-      padding: 15px;
-      border-top: 1px solid #ccc;
-    }
-    input[type="text"] {
-      flex: 1;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 20px;
-      border: 1px solid #ccc;
-      outline: none;
-    }
-    button {
-      margin-left: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 20px;
-      background-color: #004aad;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #00307a;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PHOCCy Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="chat-container">
-    <div class="chat-header">
-      PHOCCy - PHC College Chatbot
-    </div>
-    <div class="chat-box" id="chat-box"></div>
-    <div class="chat-input">
-      <input type="text" id="user-input" placeholder="Ask something about PHCET, PHCASC, PHCOP..." />
-      <button onclick="sendMessage()">Send</button>
-    </div>
+  <div id="chat-container">
+    <header id="chat-header">
+      <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/9d5c2ce4-ba3d-497a-9e4f-bbdca21ea6c2.png" alt="Bot" class="avatar" />
+      <span>PHOCCy Chatbot</span>
+    </header>
+    <main id="chat-box"></main>
+    <div id="typing" style="display:none;">Bot is typing…</div>
+    <div id="suggestions"></div>
+    <div id="feedback"></div>
+    <form id="input-form" autocomplete="off">
+      <input id="user-input" type="text" placeholder="Type your message..." />
+      <button id="send-button" type="submit" aria-label="Send message">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path d="M2 20L21 11L2 2V9L15 11L2 13V20Z" fill="currentColor"/>
+        </svg>
+      </button>
+    </form>
   </div>
-
-  <script>
-    async function sendMessage() {
-      const input = document.getElementById('user-input');
-      const message = input.value.trim();
-      if (!message) return;
-
-      addMessage(message, 'user');
-      input.value = '';
-
-      try {
-        const response = await fetch('http://localhost:3000/chat', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ question: message })
-        });
-
-        const data = await response.json();
-        const reply = data.answer || "Sorry, I don't know that yet.";
-        addMessage(reply, 'bot');
-      } catch (err) {
-        addMessage("Error: Unable to connect to the server.", 'bot');
-      }
-    }
-
-    function addMessage(text, sender) {
-      const chatBox = document.getElementById('chat-box');
-      const messageEl = document.createElement('div');
-      messageEl.className = `message ${sender}`;
-      messageEl.textContent = text;
-      chatBox.appendChild(messageEl);
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }
-  </script>
+  <script src="chatbot.js"></script>
 </body>
 </html>
